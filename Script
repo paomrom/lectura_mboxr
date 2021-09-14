@@ -1,0 +1,20 @@
+library(openxlsx)
+library(edeR)
+
+#Lectura de data de correo gmail en extensión .mbox
+
+g_no_existe <- read_mbox("/Users/paolamanzor/Desktop/No existe.mbox")
+g_no_inte <- read_mbox("/Users/paolamanzor/Desktop/No interesado.mbox")
+g_opened <- read_mbox("/Users/paolamanzor/Desktop/Opened.mbox")
+g_rebotado <- read_mbox("/Users/paolamanzor/Desktop/Rebotados.mbox")
+g_resp_atm <- read_mbox("/Users/paolamanzor/Desktop/Respuesta automática.mbox")
+g_no_abierto <- read_mbox("/Users/paolamanzor/Desktop/✔.mbox")
+g_si_abierto <- read_mbox("/Users/paolamanzor/Desktop/✔✔.mbox")
+g_sent <- read_mbox("/Users/paolamanzor/Desktop/Sent.mbox")
+
+write.xlsx(g_no_existe, file="g_no_existe.xlsx")
+write.xlsx(g_no_inte, file="g_no_inte.xlsx")
+write.xlsx(g_rebotado, file="g_rebotado.xlsx")
+write.xlsx(g_resp_atm, file="g_resp_atm.xlsx")
+write.xlsx(g_no_abierto, file="g_no_abierto.xlsx")
+write.xlsx(g_si_abierto, file="g_si_abierto.xlsx")
